@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            position: relative; /* Ensure container serves as a reference for absolute positioning */
+        }
+
+        .header_text {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            margin: 20px 0;
+        }
+
+        .gif {
+            margin-top: 20px;
+        }
+
+        .buttons {
+            margin-top: 40px;
+        }
+
+        .btn {
+            background-color: #ffffff;
+            color: rgb(233, 48, 48);
+            padding: 15px 32px;
+            font-size: 16px;
+            margin: 4px 8px; /* Increased margin between buttons */
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Tu hamesha mere baare mai hi sochti rehti hai na??😏😉</h1>
+        </div>
+        <!-- Adding the centered GIF here -->
+        <img src="https://media.giphy.com/media/d8R5HipWkYcNJAnGX9/giphy.gif" alt="Hmm GIF" class="gif">
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Haan</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Nahi</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+            var button = document.getElementById('noButton');
+            var container = document.querySelector('.container');
+
+            var x = Math.random() * (container.offsetWidth - button.offsetWidth);
+            var y = Math.random() * (container.offsetHeight - button.offsetHeight);
+
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>

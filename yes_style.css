@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: pink;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.header_text {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin: 20px 0;
+}
+
+.sub_header {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin: 20px 0;
+}
+
+.gif {
+    margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: rgb(233, 48, 48);
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
